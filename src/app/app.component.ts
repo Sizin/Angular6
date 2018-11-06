@@ -7,9 +7,10 @@ import { MOCK_RECIPES } from './recipe/shared/recipe.mock';
 })
 export class AppComponent implements OnInit {
   title = 'Coucou';
-  recipes = MOCK_RECIPES;
+  // recipes = MOCK_RECIPES;
 
   ngOnInit(): void {
-    console.log(this.recipes);
+    console.log('App.component.ts : ');
+    // console.log(this.recipes);
   }
 }

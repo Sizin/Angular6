@@ -4,10 +4,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, MatToolbarModule, MatCardModule, MatButtonModule],
-  exports: [MatToolbarModule, MatCardModule, MatButtonModule], // On exporte ce qu'on les modules qu'on veux
+  imports: [CommonModule, MatToolbarModule, MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule],
+  exports: [MatToolbarModule, MatCardModule, MatButtonModule,
+     MatFormFieldModule, MatInputModule], // On exporte ce qu'on les modules qu'on veux
 })
 export class CustomMaterialModule { }

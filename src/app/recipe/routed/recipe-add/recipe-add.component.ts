@@ -18,10 +18,6 @@ export class RecipeAddComponent implements OnInit {
   }
 
   logRecipeName() {
-    console.log(this.recipe.name);
-    console.log(this.recipe.picture);
-    console.log(this.recipe.description);
-    console.log(this.recipe.instructions);
     // tslint:disable-next-line:max-line-length
     this.recipe.ingredients = [
       {

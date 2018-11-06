@@ -40,4 +40,6 @@ export class RecipeDetailComponent implements OnInit {
       () => console.log('onCompleted')
     );
   }
+
+
 }

@@ -28,6 +28,8 @@
       <ng-template ngPluralCase="=false">Show</ng-template>
     </button>
     <button mat-raised-button color="warn" (click)="deleteRecipe(recipe.id)">Delete</button>
-    <a href="" routerLink="/recipes/{{ recipe.id }}">Details</a>
+    <a href="" routerLink="/recipes/{{ recipe.id }}">Details</a><br>
+    <a href="" routerLink="/recipes/update/{{ recipe.id }}">Edit</a>
+
   </mat-card-actions>
 </mat-card>

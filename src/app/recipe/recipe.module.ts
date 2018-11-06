@@ -7,17 +7,17 @@ import { CustomMaterialModule } from '../custom-material/custom-material.module'
 import { RecipeOverviewComponent } from './routed/recipe-overview/recipe-overview.component';
 import { RouterModule } from '@angular/router';
 import { RecipeAddComponent } from './routed/recipe-add/recipe-add.component';
-import { FormsModule } from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RecipeUpdateComponent } from './routed/recipe-update/recipe-update.component';
 
 // You can USE what you import in what you declare
 // For instance you Can use FormsModule, in RecipeAddComponent Now.
 
 
 @NgModule({
-  declarations: [RecipeListComponent, RecipeDetailComponent, RecipeOverviewComponent, RecipeAddComponent],
-  imports: [CommonModule, SharedModule, CustomMaterialModule, RouterModule, FormsModule, MatFormFieldModule, MatInputModule],
+  declarations: [RecipeListComponent, RecipeDetailComponent, RecipeOverviewComponent, RecipeAddComponent, RecipeUpdateComponent],
+  imports: [CommonModule, SharedModule, CustomMaterialModule, RouterModule, FormsModule,
+     ReactiveFormsModule],
   // exports: [RecipeListComponent, RecipeDetailComponent]
 })
 export class RecipeModule { }

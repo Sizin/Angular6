@@ -32,6 +32,12 @@ export class RecipeService {
     return this._httpClient.post<Recipe>(`${this.SERVER_URL}/recipes`, recipe);
   }
 
+  updateRecipe(recipe: Recipe): Observable<Recipe> {
+    console.log(recipe);
+    return this._httpClient.put<Recipe>(`${this.SERVER_URL}/recipes`, recipe);
+  }
+
+
   deleteRecipe(id: number): Observable<Recipe> {
     return this._httpClient.delete<Recipe>(`${this.SERVER_URL}/recipes/${id}`);
   }
