@@ -1,0 +1,51 @@
+Start un projet from scratch = ng new first-app --style=scss
+
+
+Lancement du serveur = ng serve; Ou = npm start
+
+Un peu d'aide coté designe (module) : ng add @angular/material @angular/cdk
+
+Créer un module : ng g(enerate) m(odule) #nomModule
+
+Creer un component : ng g(enerate) c(omponent) #nomComponent
+
+------- INFO STRUCTURE -----
+
+~/tslint : Config de l'environement du projet et normes de developement/ normes de codage
+~/tscofing : Configuration Typescript Dit a typescript comment on va voir notre javascript derriere. Plus ou moins élévé, plus c'est élévé plus c'est optimisé mais moins compatible au navigateur web
+~/angular.json : Présentation de notre appli, ici se font les opti; On y defini le préfixe de l'app; les sources de notre appli; La tête de nos composants via schematics; Les environement des déploiement via configurations( au debut ns on a par exemple le 'dev' et la 'prod'); fav-icon etc...
+~/.editorconfig : Fichier permettant de configurer les "normes" de l'éditeur
+~/package.json : Equivalent a pom.xml pour maven, il ya dden tte la declaration des librairies externes, Toutes les briques d'angular sont la; les "devDependencies" les trucs qui sont utile que au dev du genre les librairies de test etc...
+
+X.spec.X : Fichiers de test
+
+~/src/polyfills.ts : Pour la retrocompatibilité pour les navigatorioss
+~/src/main.ts : premier fichier qui va etre lu, on va lui dire si on est en mode prod ou dev etc
+~/src/karma.conf: Def comment on va lancer les tests
+~/src/index.html
+~/src/browserlist : Fichier d'info, on dit sur quel
+~/src/environement/environement.ts : On y defini des variable d'enviroemet(url du serveur etc..) de dev de prod ex url de dev != url de prod c'est ici qu'on les defini
+~/src/environement/environment.prod.ts : Doit avoir les meme param de environement.ts
+~/src/assets : Contient les dependencies qu'on ajoute
+
+app.module.ts : present dans tous les node_modules
+
+
+node_modules : equivalent du .m2 de maven
+
+reset.scss : Chaque navigateur a son propre style, ce fichier s'occupe de les supprimer, une fois crée dans ~/src/ il faut ajouter son path à angular.json dans styles
+
+
+--------- INFO GENE -------
+Tous les navigteurs ont un style par defaut
+
+
+
+Observable : Imaginons on a qlqun au bar et y veux une tequila, le client attend(s'endors) MAIS  pdt ce temps le bar tourne et le barman prepare, quand il a finit le client se reveille et prend son cokail
+Notre front y demande une ressource(ex : liste coktail), il s'endors mais pdt ce temps la le serveur tourne, quand on recois la liste le client;
+
+
+Module: Rassemble toutes les features lié à une fonctionnement
+
+
+champ import : Que des modules

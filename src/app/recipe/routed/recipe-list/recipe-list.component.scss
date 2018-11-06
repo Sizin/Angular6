@@ -1,0 +1,6 @@
+.recipe-container{
+  width: 100%;
+  min-height: calc(100vh - 64px); //100vh correspond à remplir a 100% le container - 64px est la taille de la toolbar
+  background-color : #fafafa;
+  display:flex;
+}

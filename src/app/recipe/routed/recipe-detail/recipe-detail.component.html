@@ -1,0 +1,33 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+    <mat-card-title>{{ recipe.name }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{ recipe.picture }}" alt="Photo of a {{ recipe.name }}">
+  <mat-card-content>
+    <p>
+      {{ recipe.description }}
+    </p>
+    <div *ngIf="isExpanded">
+      <h2>Ingredients</h2>
+      <ul *ngFor="let ingredient of recipe.ingredients">
+        <li>{{ ingredient.name }} - {{ ingredient.quantity }}{{ ingredient.unit }}</li>
+      </ul>
+
+      <h2>Instruction</h2>
+      <ul *ngFor="let instruction of recipe.instructions | strToArray">
+        <li>{{ instruction }}</li>
+      </ul>
+    </div>
+
+  </mat-card-content>
+  <mat-card-actions>
+
+    <button mat-raised-button color="primary" (click)="toggleExpand()" [ngPlural]="isExpanded">
+      <ng-template ngPluralCase="=true">Hide</ng-template>
+      <ng-template ngPluralCase="=false">Show</ng-template>
+    </button>
+    <button mat-raised-button color="primary">SHARE</button>
+    <a href="" routerLink="/recipes/{{ recipe.id }}">Details</a>
+  </mat-card-actions>
+</mat-card>
