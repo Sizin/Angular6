@@ -1,0 +1,22 @@
+<h2> Add recipe </h2>
+
+<div class="form-container">
+  <mat-form-field class="addForm">
+    <input matInput placeholder="Name" [(ngModel)]="recipe.name">
+  </mat-form-field>
+  <mat-form-field class="addForm">
+    <input matInput placeholder="Picture" [(ngModel)]="recipe.picture">
+  </mat-form-field>
+  <mat-form-field class="addForm">
+    <input matInput placeholder="Description" [(ngModel)]="recipe.description">
+  </mat-form-field>
+  <mat-form-field class="addForm">
+    <input matInput placeholder="Ingredients" [(ngModel)]="recipe.ingredients">
+  </mat-form-field>
+  <mat-form-field class="addForm">
+    <input matInput placeholder="Intructions" [(ngModel)]="recipe.instructions">
+  </mat-form-field>
+  <button mat-raised-button color="accent" (click)="logRecipeName()">Accent</button>
+</div>
+
+{{ recipe.name }}

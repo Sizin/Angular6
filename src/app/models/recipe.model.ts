@@ -1,7 +1,7 @@
 import { Ingredient } from './ingredient.model';
 
 export class Recipe {
-  id: string;
+  id: number;
   name: string;
   picture: string;
   description: string;

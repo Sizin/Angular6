@@ -27,7 +27,7 @@
       <ng-template ngPluralCase="=true">Hide</ng-template>
       <ng-template ngPluralCase="=false">Show</ng-template>
     </button>
-    <button mat-raised-button color="primary">SHARE</button>
+    <button mat-raised-button color="warn" (click)="deleteRecipe(recipe.id)">Delete</button>
     <a href="" routerLink="/recipes/{{ recipe.id }}">Details</a>
   </mat-card-actions>
 </mat-card>

@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Recipe } from '../../../models/recipe.model';
-import { Ingredient } from '../../../models/ingredient.model';
+import { RecipeService } from '../../shared/recipe.service';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -8,19 +8,36 @@ import { Ingredient } from '../../../models/ingredient.model';
   styleUrls: ['./recipe-detail.component.scss']
 })
 export class RecipeDetailComponent implements OnInit {
-
   @Input()
   recipe: Recipe;
   isExpanded = false;
 
-  constructor() { }
+  @Output()
+  delete: EventEmitter<Recipe> = new EventEmitter();
 
-  ngOnInit() {
+  constructor(private _recipeService: RecipeService) {}
 
-  }
+  ngOnInit() {}
 
   toggleExpand() {
     this.isExpanded = !this.isExpanded;
   }
 
+  deleteRecipe(id) {
+    // this._recipeService
+    //   .deleteRecipe(id)
+    //   .subscribe(
+    //     () => console.log('onNext'),
+    //     error => console.log(error),
+    //     () => console.log('onCompleted')
+    //   );
+    this._recipeService.deleteRecipe(this.recipe.id).subscribe(
+      () => {
+        console.log('onNext');
+        this.delete.emit(this.recipe);
+      },
+      error => console.log(error),
+      () => console.log('onCompleted')
+    );
+  }
 }

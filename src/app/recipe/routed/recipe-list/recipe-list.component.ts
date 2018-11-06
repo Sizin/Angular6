@@ -20,12 +20,19 @@ export class RecipeListComponent implements OnInit {
 
   // Commee Autowired de Spring on importe le service
   constructor(private _recipeService: RecipeService) {
+    // this._recipeService.getRecipes().subscribe(recipes => this.recipes = recipes);
     this._recipeService.getRecipes().subscribe(recipes => this.recipes = recipes);
+
   }
 
   ngOnInit() {
     console.log('ngOnInit', this.recipes);
 
+  }
+
+  emitDelete(recipe) {
+    console.log(recipe);
+    this.recipes.splice(this.recipes.indexOf(recipe), 1);
   }
 
 }
