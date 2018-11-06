@@ -2,13 +2,13 @@
 <form [formGroup]="recipeForm" >
 
   <mat-form-field class="addForm">
-    <input type="text" formControlName="name" [value]="recipe.name" required>
+    <input matInput type="text" formControlName="name" [value]="recipe.name" required>
   </mat-form-field>
   <mat-form-field class="addForm">
-    <input type="text" formControlName="picture" [value]="recipe.picture" required>
+    <input matInput type="text" formControlName="picture" [value]="recipe.picture" required>
   </mat-form-field>
   <mat-form-field class="addForm">
-    <input type="text" formControlName="description" [value]="recipe.instructions" required>
+    <input matInput type="text" formControlName="description" [value]="recipe.instructions" required>
   </mat-form-field>
   <button mat-raised-button color="accent" (click)="updateComputer()">Edit</button>
   </form>

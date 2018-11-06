@@ -8,6 +8,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { CustomMaterialModule } from './custom-material/custom-material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RecipeModule } from './recipe/recipe.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { RecipeModule } from './recipe/recipe.module';
     CustomMaterialModule,
     HttpClientModule,
     RecipeModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

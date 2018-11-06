@@ -23,13 +23,14 @@
   </mat-card-content>
   <mat-card-actions>
 
-    <button mat-raised-button color="primary" (click)="toggleExpand()" [ngPlural]="isExpanded">
+    <button mat-raised-button color="basic" (click)="toggleExpand()" [ngPlural]="isExpanded">
       <ng-template ngPluralCase="=true">Hide</ng-template>
       <ng-template ngPluralCase="=false">Show</ng-template>
     </button>
     <button mat-raised-button color="warn" (click)="deleteRecipe(recipe.id)">Delete</button>
-    <a href="" routerLink="/recipes/{{ recipe.id }}">Details</a><br>
-    <a href="" routerLink="/recipes/update/{{ recipe.id }}">Edit</a>
+
+    <a mat-raised-button routerLink="/recipes/{{ recipe.id }}" color="primary">Details</a>
+    <a mat-raised-button routerLink="/recipes/update/{{ recipe.id }}" color="accent">Edit</a>
 
   </mat-card-actions>
 </mat-card>

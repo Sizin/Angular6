@@ -34,7 +34,7 @@ export class RecipeService {
 
   updateRecipe(recipe: Recipe): Observable<Recipe> {
     console.log(recipe);
-    return this._httpClient.put<Recipe>(`${this.SERVER_URL}/recipes`, recipe);
+    return this._httpClient.patch<Recipe>(`${this.SERVER_URL}/recipes`, recipe);
   }
 
 

@@ -17,8 +17,8 @@ export class RecipeUpdateComponent implements OnInit {
 
   recipeForm = this.fb.group({
     name: ['', Validators.required],
-    picture : [''],
-    description : [''],
+    picture : ['', Validators.required],
+    description : ['', Validators.required],
   });
 
 
@@ -40,7 +40,9 @@ export class RecipeUpdateComponent implements OnInit {
     this.recipe.name = this.recipeForm.get('name').value;
     this.recipe.description = this.recipeForm.get('description').value;
     this.recipe.picture = this.recipeForm.get('picture').value;
-    this._recipeService.updateRecipe(this.recipe).subscribe(recipe => this.recipe = recipe);
+    console.log(this.recipe);
+
+    this._recipeService.updateRecipe(this.recipe).subscribe(() => console.log('Update success'));
   }
 
 }
